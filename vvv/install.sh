@@ -13,7 +13,9 @@ cd ~/Development
 if [ ! -d "vvv" ]; then
 	git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
 	cp "$VVV_ROOT/provision-post.sh" vvv/provision
-	cp "$VVV_ROOT/github.token" vvv/provision
+	if [ -f "$VVV_ROOT/github.token" ]; then
+		cp "$VVV_ROOT/github.token" vvv/provision
+	fi
 	mkdir -p vvv/config/custom
 	cp "$VVV_ROOT/vvv/gitconfig" vvv/config/custom
 	cp -R "$VVV_ROOT/vvv/custom" vvv/www
