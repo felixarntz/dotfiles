@@ -54,6 +54,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 * Tunnelblick
 * UnRAR
 * Vagrant (with some plugins)
+* Varying Vagrant Vagrants
 * Virtualbox
 * VLC Player
 * wget
