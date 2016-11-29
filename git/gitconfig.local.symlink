@@ -1,0 +1,5 @@
+[user]
+	name = Felix Arntz
+	email = felix-arntz@leaves-and-love.net
+[credential]
+	helper = osxkeychain

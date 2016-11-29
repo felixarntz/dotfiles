@@ -1,0 +1,31 @@
+[include]
+	path = ~/.gitconfig.local
+[hub]
+	protocol = https
+[alias]
+	promote             = !$ZSH/bin/git-promote
+	wtf                 = !$ZSH/bin/git-wtf
+	rank-contributors   = !$ZSH/bin/git-rank-contributors
+	delete-local-merged = !$ZSH/bin/git-delete-local-merged
+	changelog           = !$ZSH/bin/git-changelog
+	count               = !git shortlog -sn
+	pr                  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr-clean            = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[apply]
+	whitespace = nowarn
+[mergetool]
+	keepBackup = false
+[difftool]
+	prompt = false
+[help]
+	autocorrect = 1
+[push]
+	default = simple

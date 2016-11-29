@@ -1,0 +1,7 @@
+[user]
+	name = Felix Arntz
+	email = felix-arntz@leaves-and-love.net
+[credential]
+	helper = 'cache --timeout=3600'
+[push]
+	default = simple

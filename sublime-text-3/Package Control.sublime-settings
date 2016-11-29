@@ -1,0 +1,17 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"DocBlockr",
+		"EditorConfig",
+		"LESS",
+		"Package Control",
+		"Sass",
+		"SFTP",
+		"WordPress Developer Resources",
+		"Xdebug Client"
+	]
+}
