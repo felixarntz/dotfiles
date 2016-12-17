@@ -17,7 +17,6 @@ node_modules/*
 [Dd]esktop.ini
 *.DS_store
 .DS_store?
-bin/
 tmp/
 *.tmp
 *.bak
