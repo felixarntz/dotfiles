@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# Fix permissions throughout a directory.
+#
+# I use this to adjust permissions to owner only on things downloaded
+# from various sources, usually plugins from the wp.org repository.
+
+find ./ -type d -exec chmod 755 {} \;
+find ./ -type f -exec chmod 644 {} \;

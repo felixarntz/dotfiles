@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+#
+gcloud compute --project "leaves-and-love-network" ssh --zone "us-east1-b" "network-main"

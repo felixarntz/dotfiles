@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+#
+r=${1:-`git describe --tags --abbrev=0`..HEAD}; echo Changelog for $r; git log --reverse --no-merges --format='* %s' $r;
