@@ -66,15 +66,15 @@ These dotfiles will install common software and setup preferences on a new Mac O
 ### Prerequisites
 
 * Create an SSH key for GitHub: `ssh-keygen -t rsa -b 4096 -C "felix-arntz@leaves-and-love.net"`
-* Store it as `~/.ssh/github_rsa`
-* Run `eval "$(ssh-agent -s)"` and then `ssh-add ~/.ssh/github_rsa`
-* Run `pbcopy < ~/.ssh/github_rsa`
+* Store it as `~/.ssh/id_rsa`
+* Run `eval "$(ssh-agent -s)"` and then `ssh-add ~/.ssh/id_rsa`
+* Run `pbcopy < ~/.ssh/id_rsa`
 * [Add the new key to your GitHub account](https://github.com/settings/keys) by pasting it
 
 ### Setting up dotfiles
 
 * place the repository at `$HOME/dotfiles`
-* remove `git/gintconfig.local.symlink`
+* remove `git/gitconfig.local.symlink`
 * adjust or remove the following files:
     * `bin/set-defaults`
     * `google-cloud-sdk/install.sh`
