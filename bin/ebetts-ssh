@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+#
+ssh ericstan@ericstantonbetts.com -p18765
