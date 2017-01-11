@@ -1,4 +1,4 @@
-/usr/local/bin/subl#!/bin/sh
+#!/bin/sh
 
 cd "$(dirname "$0")/.."
 VVV_ROOT=$(pwd -P)
