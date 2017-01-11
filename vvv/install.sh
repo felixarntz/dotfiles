@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VVV_ROOT=$(pwd -P)
+VVV_ROOT="~/dotfiles/vvv"
 
 if [ ! -d "~/Development" ]; then
 	mkdir -p ~/Development
