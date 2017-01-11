@@ -1,4 +1,4 @@
-#!/bin/sh
+/usr/local/bin/subl#!/bin/sh
 
 cd "$(dirname "$0")/.."
 VVV_ROOT=$(pwd -P)
@@ -38,10 +38,10 @@ fi
 MISC_REPOSITORIES=( bedrock leavesandlove-wp-plugin-util plugin-lib slides wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-objects wp-starter-theme wpdlib )
 for i in "${MISC_REPOSITORIES[@]}"
 do :
-	if [[ ! -d "vvv/www/misc/$i" ]]; then
-		git clone git@github.com:felixarntz/$i.git vvv/www/misc/$i
+	if [[ ! -d "vvv/www/custom/misc/$i" ]]; then
+		git clone git@github.com:felixarntz/$i.git vvv/www/custom/misc/$i
 	else
-		cd vvv/www/misc/$i
+		cd vvv/www/custom/misc/$i
 		git pull
 		cd ../../../..
 	fi
