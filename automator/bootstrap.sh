@@ -1,1 +1,1 @@
-cp -R Open\ in\ Sublime.workflow ~/Library/Services
+cp -R ~/dotfiles/automator/Open\ in\ Sublime.workflow ~/Library/Services
