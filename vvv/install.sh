@@ -17,8 +17,8 @@ if [ ! -d "vvv" ]; then
 		cp "$VVV_ROOT/github.token" vvv/provision
 	fi
 	mkdir -p vvv/config/custom
-	cp "$VVV_ROOT/vvv/gitconfig" vvv/config/custom
-	cp -R "$VVV_ROOT/vvv/custom" vvv/www
+	cp "$VVV_ROOT/gitconfig" vvv/config/custom
+	cp -R "$VVV_ROOT/custom" vvv/www
 else
 	cd vvv
 	git pull
