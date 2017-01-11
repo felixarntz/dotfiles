@@ -1,4 +1,4 @@
-if [ ! -z "$(type -p "phpunit")" ]; then
+if [ ! -x "$(command -v phpunit)" ]; then
 	cd /tmp/
 	wget https://phar.phpunit.de/phpunit.phar
 	chmod +x phpunit.phar
