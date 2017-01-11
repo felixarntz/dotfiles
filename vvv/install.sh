@@ -1,6 +1,5 @@
 #!/bin/sh
 
-cd "$(dirname "$0")/.."
 VVV_ROOT=$(pwd -P)
 
 if [ ! -d "~/Development" ]; then
