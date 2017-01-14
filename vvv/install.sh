@@ -12,8 +12,7 @@ cd ~/Development
 # Clone VVV
 if [ ! -d "vvv" ]; then
 	git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
-	rm vvv/vvv-config.yml
-	cp "$VVV_ROOT/vvv-config.yml" vvv
+	cp "$VVV_ROOT/vvv-custom.yml" vvv
 	cp -R "$VVV_ROOT/config/custom" vvv/config
 	cp -R "$VVV_ROOT/www/custom" vvv/www
 	cp -R "$VVV_ROOT/provision/resources/custom" vvv/provision/resources
