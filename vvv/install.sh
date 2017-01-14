@@ -12,13 +12,15 @@ cd ~/Development
 # Clone VVV
 if [ ! -d "vvv" ]; then
 	git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
-	cp "$VVV_ROOT/provision-post.sh" vvv/provision
-	if [ -f "$VVV_ROOT/github.token" ]; then
-		cp "$VVV_ROOT/github.token" vvv/provision
+	rm vvv/vvv-config.yml
+	cp "$VVV_ROOT/vvv-config.yml" vvv
+	cp -R "$VVV_ROOT/config/custom" vvv/config
+	cp -R "$VVV_ROOT/www/custom" vvv/www
+	cp -R "$VVV_ROOT/provision/resources/custom" vvv/provision/resources
+	cp "$VVV_ROOT/provision/provision-post.sh" vvv/provision
+	if [ -f "$VVV_ROOT/provision/github.token" ]; then
+		cp "$VVV_ROOT/provision/github.token" vvv/provision
 	fi
-	mkdir -p vvv/config/custom
-	cp "$VVV_ROOT/gitconfig" vvv/config/custom
-	cp -R "$VVV_ROOT/custom" vvv/www
 else
 	cd vvv
 	git pull

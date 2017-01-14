@@ -1,0 +1,31 @@
+---
+sites:
+  wordpress-default:
+    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-default.git
+    hosts:
+      - local.wordpress.dev
+
+  wordpress-develop:
+    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
+    hosts:
+      - src.wordpress-develop.dev
+      - build.wordpress-develop.dev
+
+  wordpress-develop-multisite:
+    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-multisite.git
+
+  wordpress-meta-environment:
+    repo: https://github.com/WordPress/meta-environment.git
+
+  custom:
+    repo: false
+
+utilities:
+  core:
+    - memcached-admin
+    - opcache-status
+    - phpmyadmin
+    - webgrind
+  custom:
+    - bower
+    - gulp
