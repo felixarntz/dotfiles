@@ -23,11 +23,14 @@ fi
 
 if [[ ! -d "wp-content/plugins/wp-multi-network" ]]; then
 	noroot git clone git@github.com:felixarntz/wp-multi-network.git wp-content/plugins/wp-multi-network --quiet
-	noroot wp plugin activate wp-multi-network --network --url=network-revolution.dev --quiet
 
+	noroot wp plugin activate wp-multi-network --network --url=network-revolution.dev --quiet
 	noroot wp site create --slug=subsite1 --title="Subsite 1" --email="admin@local.dev" --network_id=1 --url=network-revolution.dev --quiet
 	noroot wp site create --slug=subsite2 --title="Subsite 2" --email="admin@local.dev" --network_id=1 --url=network-revolution.dev --quiet
+
 	noroot wp wp-multi-network create network-revolution2.dev / --site_name="Network Revolution 2" --user=1 --url=network-revolution.dev --quiet
+
+	noroot wp plugin activate wp-multi-network --network --url=network-revolution2.dev --quiet
 	noroot wp site create --slug=subsite1 --title="Subsite 1" --email="admin@local.dev" --network_id=2 --url=network-revolution2.dev --quiet
 	noroot wp site create --slug=subsite2 --title="Subsite 2" --email="admin@local.dev" --network_id=2 --url=network-revolution2.dev --quiet
 else
@@ -36,10 +39,12 @@ else
 	cd ../../..
 fi
 
-if [[ ! -d "wp-content/mu-plugins" ]]; then
-	noroot git clone git@github.com:felixarntz/wp-network-roles.git wp-content/mu-plugins --quiet
+if [[ ! -d "wp-content/plugins/wp-network-roles" ]]; then
+	noroot git clone git@github.com:felixarntz/wp-network-roles.git wp-content/plugins/wp-network-roles --quiet
+	noroot wp plugin activate wp-network-roles --network --url=network-revolution.dev --quiet
+	noroot wp plugin activate wp-network-roles --network --url=network-revolution2.dev --quiet
 else
-	cd wp-content/mu-plugins
+	cd wp-content/plugins/wp-network-roles
 	noroot git pull --quiet
 	cd ../../..
 fi
@@ -47,6 +52,7 @@ fi
 if [[ ! -d "wp-content/plugins/global-admin" ]]; then
 	noroot git clone git@github.com:felixarntz/global-admin.git wp-content/plugins/global-admin --quiet
 	noroot wp plugin activate global-admin --network --url=network-revolution.dev --quiet
+	noroot wp plugin activate global-admin --network --url=network-revolution2.dev --quiet
 else
 	cd wp-content/plugins/global-admin
 	noroot git pull --quiet
