@@ -3,7 +3,7 @@
 echo "Setting up plugins.dev"
 
 WP_PLUGINS=( contact-form-7 )
-GIT_PLUGINS=( attachment-taxonomies bootstrap-for-contact-form-7 content-organizer css-outsourcer customizer-definitely easy-customer-invoices easy-digital-downloads options-definitely paypal-plus-for-edd pet-store post-types-definitely responsive-video-shortcodes site-icon-extended torro-forms-bootstrap-markup widgets-definitely wordpress-fields-api wp-encrypt wp-gcs-offload )
+GIT_PLUGINS=( attachment-taxonomies bootstrap-for-contact-form-7 content-organizer css-outsourcer customizer-definitely easy-digital-downloads options-definitely paypal-plus-for-edd pet-store post-types-definitely responsive-video-shortcodes site-icon-extended torro-forms-bootstrap-markup widgets-definitely wordpress-fields-api wp-encrypt wp-gcs-offload )
 
 mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS plugins"
 mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON plugins.* TO wp@localhost IDENTIFIED BY 'wp';"
