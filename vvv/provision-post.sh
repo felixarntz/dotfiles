@@ -4,7 +4,7 @@
 #
 # This code comes from the original VVV provisioning script.
 
-function networkDetection() {
+networkDetection() {
 	if [[ "$(wget --tries=3 --timeout=5 --spider http://google.com 2>&1 | grep 'connected')" ]]; then
 		ping_result="Connected"
 	else
@@ -12,7 +12,7 @@ function networkDetection() {
 	fi
 }
 
-function networkCheck() {
+networkCheck() {
 	networkDetection
 	if [[ ! "$ping_result" == "Connected" ]]; then
 		echo -e "\nNo network connection available, skipping package installation"
@@ -20,12 +20,12 @@ function networkCheck() {
 	fi
 }
 
-function setupGitConfig() {
+setupGitConfig() {
 	cp "/srv/config/custom/gitconfig" "/home/vagrant/.gitconfig"
 	echo " * Copied /srv/config/gitconfig to /home/vagrant/.gitconfig"
 }
 
-function installNodeModules() {
+installNodeModules() {
 	if [[ "$(gulp --version)" ]]; then
 		echo "Updating Gulp CLI"
 		npm update -g gulp-cli &>/dev/null
