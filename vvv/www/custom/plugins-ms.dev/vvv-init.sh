@@ -3,7 +3,7 @@
 echo "Setting up plugins-ms.dev"
 
 WP_PLUGINS=()
-GIT_PLUGINS=( wp-encrypt wp-gcs-offload )
+GIT_PLUGINS=( wp-encrypt wp-gcs-offload wp-plugin-control )
 
 mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS plugins_ms"
 mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON plugins_ms.* TO wp@localhost IDENTIFIED BY 'wp';"
