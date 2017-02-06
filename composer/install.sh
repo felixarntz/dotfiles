@@ -1,4 +1,4 @@
-if [ ! -z "$(type -p "composer")" ]; then
+if [ ! -x "$(command -v composer)" ]; then
 	cd /tmp/
 	curl -sS https://getcomposer.org/installer | php
 	chmod +x composer.phar

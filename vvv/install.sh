@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd "$(dirname "$0")/.."
+cd ~/dotfiles/vvv
 VVV_ROOT=$(pwd -P)
 
 if [ ! -d "~/Development" ]; then
@@ -12,13 +12,14 @@ cd ~/Development
 # Clone VVV
 if [ ! -d "vvv" ]; then
 	git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
-	cp "$VVV_ROOT/provision-post.sh" vvv/provision
-	if [ -f "$VVV_ROOT/github.token" ]; then
-		cp "$VVV_ROOT/github.token" vvv/provision
+	cp "$VVV_ROOT/vvv-custom.yml" vvv
+	cp -R "$VVV_ROOT/config/custom" vvv/config
+	cp -R "$VVV_ROOT/www/custom" vvv/www
+	cp -R "$VVV_ROOT/provision/resources/custom" vvv/provision/resources
+	cp "$VVV_ROOT/provision/provision-post.sh" vvv/provision
+	if [ -f "$VVV_ROOT/provision/github.token" ]; then
+		cp "$VVV_ROOT/provision/github.token" vvv/provision
 	fi
-	mkdir -p vvv/config/custom
-	cp "$VVV_ROOT/vvv/gitconfig" vvv/config/custom
-	cp -R "$VVV_ROOT/vvv/custom" vvv/www
 else
 	cd vvv
 	git pull
@@ -38,10 +39,10 @@ fi
 MISC_REPOSITORIES=( bedrock leavesandlove-wp-plugin-util plugin-lib slides wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-objects wp-starter-theme wpdlib )
 for i in "${MISC_REPOSITORIES[@]}"
 do :
-	if [[ ! -d "vvv/www/misc/$i" ]]; then
-		git clone git@github.com:felixarntz/$i.git vvv/www/misc/$i
+	if [[ ! -d "vvv/www/custom/misc/$i" ]]; then
+		git clone git@github.com:felixarntz/$i.git vvv/www/custom/misc/$i
 	else
-		cd vvv/www/misc/$i
+		cd vvv/www/custom/misc/$i
 		git pull
 		cd ../../../..
 	fi

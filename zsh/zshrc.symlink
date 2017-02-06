@@ -51,4 +51,5 @@ done
 unset config_files
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+{ssh-add ~/.ssh/id_rsa} &>/dev/null
+export SSH_KEY_PATH="~/.ssh/id_rsa"

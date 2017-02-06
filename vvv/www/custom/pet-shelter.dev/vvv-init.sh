@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 echo "Setting up pet-shelter.dev"
 
 mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS pet_shelter"
