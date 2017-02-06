@@ -38,6 +38,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 * imagemagick
 * Ionic CLI
 * iTerm 2 (with configuration)
+* Keybase
 * Java
 * Node
 * OpenSSL
