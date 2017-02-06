@@ -6,3 +6,14 @@ if [ ! -x "$(command -v composer)" ]; then
 else
 	composer self-update
 fi
+
+if [ ! -d ~/.composer ]; then
+	mkdir ~/.composer
+fi
+
+if [ ! -d ~/.composer/vendor ]; then
+	ln -s ~/dotfiles/composer/composer.json ~/.composer/composer.json
+	composer global install
+else
+	composer global update
+fi
