@@ -55,7 +55,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 * Tunnelblick
 * UnRAR
 * Vagrant (with some plugins)
-* Varying Vagrant Vagrants
+* Varying Vagrant Vagrants (with configuration)
 * Virtualbox
 * VLC Player
 * wget
@@ -95,8 +95,9 @@ These are noted here for my own setup, they are not actually required as you wil
 ## Credits
 
 Most of my dotfiles are a collection of things I found in other people's dotfiles, and then sometimes tweaked it to my own needs.
-A lot of them (especially the general infrastructure) were copied from [Jeremy Felt](https://github.com/jeremyfelt/dotfiles), and my dotfiles were also inspired by:
+A lot of them (especially the general infrastructure) were copied from [Jeremy Felt](https://github.com/jeremyfelt/dotfiles), and my dotfiles were also inspired by (in any way):
 
 * [Helen Hou-Sandí](https://gist.github.com/helen/8493a6b4b57bfbf1ecaf)
 * [Pascal Birchler](https://github.com/swissspidy/dotfiles)
 * [Wes Bos](https://github.com/wesbos/Cobalt2-iterm)
+* [John Blackbourn](https://johnblackbourn.com/my-st3-packages)
