@@ -5,12 +5,22 @@
 	],
 	"installed_packages":
 	[
+		"Behat",
 		"DocBlockr",
 		"EditorConfig",
+		"Function Name Display",
+		"HTML-CSS-JS Prettify",
 		"LESS",
+		"nginx",
 		"Package Control",
+		"Phpcs",
+		"Pretty JSON",
 		"Sass",
 		"SFTP",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-php",
+		"SyncedSideBar",
 		"WordPress Developer Resources",
 		"Xdebug Client"
 	]
