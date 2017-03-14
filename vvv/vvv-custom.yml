@@ -180,7 +180,7 @@ sites:
         - wuppertalbewegung-theme
 
 utility-sources:
-  custom: git@github.com:felixarntz/vvv-custom-utilities.git
+  custom: https://github.com:felixarntz/vvv-custom-utilities.git
 
 utilities:
   core:
