@@ -21,7 +21,8 @@ if [ ! -d "vvv" ]; then
 	if [ -f "$VVV_ROOT/provision/github.token" ]; then
 		cp "$VVV_ROOT/provision/github.token" vvv/provision
 	fi
-	cp -R "$VVV_ROOT/www" vvv/www
+	cp -R "$VVV_ROOT/www/api-api-develop" vvv/www
+	cp -R "$VVV_ROOT/www/playground" vvv/www
 else
 	cd vvv
 	git pull
@@ -29,7 +30,7 @@ else
 fi
 
 # Clone misc repositories into misc directory (not VVV-related)
-MISC_REPOSITORIES=( leavesandlove-wp-plugin-util plugin-lib slides wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-starter-theme wpdlib )
+MISC_REPOSITORIES=( custom-site-template leavesandlove-wp-plugin-util plugin-lib slides vvv-custom-utilities wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-starter-theme wpdlib )
 for i in "${MISC_REPOSITORIES[@]}"
 do :
 	if [[ ! -d "misc/$i" ]]; then
