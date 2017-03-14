@@ -12,38 +12,31 @@ cd ~/Development
 # Clone VVV
 if [ ! -d "vvv" ]; then
 	git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
-	cp "$VVV_ROOT/vvv-custom.yml" vvv
-	cp -R "$VVV_ROOT/config/custom" vvv/config
-	cp -R "$VVV_ROOT/www/custom" vvv/www
-	cp -R "$VVV_ROOT/provision/resources/custom" vvv/provision/resources
-	cp "$VVV_ROOT/provision/provision-post.sh" vvv/provision
+	ln -s $VVV_ROOT/vvv-custom.yml vvv/vvv-custom.yml
+	ln -s $VVV_ROOT/Customfile vvv/Customfile
+	ln -s $VVV_ROOT/config/gitconfig vvv/config/gitconfig
+	ln -s $VVV_ROOT/config/init/vvv-start-custom.conf vvv/config/init/vvv-start-custom.conf
+	ln -s $VVV_ROOT/provision/provision-post.sh vvv/provision/provision-post.sh
+
 	if [ -f "$VVV_ROOT/provision/github.token" ]; then
 		cp "$VVV_ROOT/provision/github.token" vvv/provision
 	fi
+	cp -R "$VVV_ROOT/www" vvv/www
 else
 	cd vvv
 	git pull
 	cd ..
 fi
 
-# Clone WordPress Meta Environment into VVV
-if [ ! -d "vvv/www/wordpress-meta-environment" ]; then
-	git clone git@github.com:WordPress/meta-environment.git vvv/www/wordpress-meta-environment
-else
-	cd vvv/www/wordpress-meta-environment
-	git pull
-	cd ../../..
-fi
-
-# Clone misc repositories into VVV
-MISC_REPOSITORIES=( bedrock leavesandlove-wp-plugin-util plugin-lib slides wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-objects wp-starter-theme wpdlib )
+# Clone misc repositories into misc directory (not VVV-related)
+MISC_REPOSITORIES=( leavesandlove-wp-plugin-util plugin-lib slides wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-starter-theme wpdlib )
 for i in "${MISC_REPOSITORIES[@]}"
 do :
-	if [[ ! -d "vvv/www/custom/misc/$i" ]]; then
-		git clone git@github.com:felixarntz/$i.git vvv/www/custom/misc/$i
+	if [[ ! -d "misc/$i" ]]; then
+		git clone git@github.com:felixarntz/$i.git misc/$i
 	else
-		cd vvv/www/custom/misc/$i
+		cd misc/$i
 		git pull
-		cd ../../../..
+		cd ..
 	fi
 done

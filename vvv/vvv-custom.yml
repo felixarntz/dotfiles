@@ -11,14 +11,176 @@ sites:
       - src.wordpress-develop.dev
       - build.wordpress-develop.dev
 
-  wordpress-develop-multisite:
-    repo: https://github.com/Varying-Vagrant-Vagrants/vvv-multisite.git
-
   wordpress-meta-environment:
     repo: https://github.com/WordPress/meta-environment.git
 
-  custom:
+  plugins:
+    repo: https://github.com/felixarntz/custom-site-template
+    hosts:
+      - plugins.dev
+    custom:
+      site_title: 'Plugins Dev'
+      wp_plugins:
+        - contact-form-7
+      git_plugins:
+        - attachment-taxonomies
+        - bootstrap-for-contact-form-7
+        - bulk-emails
+        - content-organizer
+        - custom-css-outsourcer
+        - customizer-definitely
+        - easy-digital-downloads
+        - options-definitely
+        - paypal-plus-for-edd
+        - pet-store
+        - post-types-definitely
+        - responsive-video-shortcodes
+        - site-icon-extended
+        - torro-forms-bootstrap-markup
+        - widgets-definitely
+        - wp-encrypt
+        - wp-gcs-offload
+        - wp-objects
+        - wp-plugin-control
+        - wp-shortcode-cache
+
+  plugins-ms:
+    repo: https://github.com/felixarntz/custom-site-template
+    hosts:
+      - plugins-ms.dev
+      - subsite1.plugins-ms.dev
+      - subsite2.plugins-ms.dev
+    custom:
+      site_title: 'Plugins MS Dev'
+      wp_type: 'subdomain'
+      git_plugins:
+        - wp-encrypt
+        - wp-gcs-offload
+        - wp-plugin-control
+
+  network-revolution:
+    repo: https://github.com/felixarntz/custom-site-template
+    hosts:
+      - network-revolution.dev
+      - subsite1.network-revolution.dev
+      - subsite2.network-revolution.dev
+      - network-revolution2.dev
+      - subsite1.network-revolution2.dev
+      - subsite2.network-revolution2.dev
+    custom:
+      site_title: 'Network Revolution'
+      wp_type: 'subdomain'
+      git_plugins:
+        - global-admin
+        - wp-multi-network
+        - wp-network-roles
+        - wp-user-signups
+
+  buddypress:
+    repo: https://github.com/felixarntz/custom-site-template
+    hosts:
+      - buddypress.dev
+    custom:
+      site_title: 'BuddyPress'
+      wp_plugins:
+        - buddypress
+
+  bedrock:
+    repo: https://github.com/felixarntz/bedrock
+    hosts:
+      - bedrock.dev
+    custom:
+      site_title: 'Bedrock Dev'
+
+  leaves-and-love:
+    repo: 'https://github.com/felixarntz/leaves-and-love-network'
+    hosts:
+      - leaves-and-love.dev
+      - felix-arntz.dev
+      - alexa.felix-arntz.dev
+      - cocktails.felix-arntz.dev
+      - screen-reader-check.felix-arntz.dev
+      - scheisse.felix-arntz.dev
+      - vielleichtinteressant.dev
+      - wpzapp.dev
+    custom:
+      site_title: 'leaves-and-love.dev'
+      wp_type: 'subdomain'
+
+  playground:
     repo: false
+
+  api-api-develop:
+    repo: false
+    custom:
+      repo_names:
+        - boilerplate-for-authenticator
+        - boilerplate-for-storage
+        - boilerplate-for-structure
+        - boilerplate-for-transporter
+        - core
+        - console
+        - storage-cookie
+        - storage-session
+        - storage-wordpress-option
+        - storage-wordpress-usermeta
+        - structure-billomat
+        - structure-google
+        - structure-twitter
+        - structure-wordpress
+
+  bauing-immobilien:
+    repo: https://github.com/felixarntz/custom-site-template
+    hosts:
+      - bauing-immobilien.dev
+    custom:
+      site_title: 'BAUING Immobilien'
+      wp_plugins:
+        - easy-digital-downloads
+        - super-cpt
+      git_plugins:
+        - bauing-energieausweis
+        - energieausweis-online
+
+  energieausweis-online-erstellen:
+    repo: https://github.com/felixarntz/custom-site-template
+    hosts:
+      - energieausweis-online-erstellen.dev
+    custom:
+      site_title: 'Energieausweis online erstellen'
+      wp_plugins:
+        - easy-digital-downloads
+        - lazy-load
+        - mashsharer
+        - options-definitely
+        - wordpress-seo
+        - wp-postratings
+      git_plugins:
+        - edd-custom-fees
+        - wp-energieausweis-online
+        - wp-postratings-migrate
+      git_themes:
+        - immoticket-energieausweis-theme
+
+  immoticket24:
+    repo: 'https://github.com/felixarntz/immoticket24-network'
+    hosts:
+      - immoticket24.dev
+    custom:
+      site_title: 'Immoticket24.dev'
+      wp_type: 'subdomain'
+
+  wuppertalbewegung:
+    repo: https://github.com/felixarntz/custom-site-template
+    hosts:
+      - wuppertalbewegung.dev
+    custom:
+      site_title: 'Wuppertalbewegung e.V.'
+      git_themes:
+        - wuppertalbewegung-theme
+
+utility-sources:
+  custom: git@github.com:felixarntz/vvv-custom-utilities.git
 
 utilities:
   core:
