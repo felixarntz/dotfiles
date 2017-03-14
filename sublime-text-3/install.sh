@@ -2,8 +2,12 @@ if [ ! -f ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Pa
 	curl "https://packagecontrol.io/Package Control.sublime-package" > ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
 fi
 
-if [ ! -d /usr/local/bin/subl ]; then
+if [ ! -f /usr/local/bin/subl ]; then
 	ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+fi
+
+if [ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
+	mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 fi
 
 ln -s ~/dotfiles/sublime-text-3/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
