@@ -1,6 +1,5 @@
 {
 	"auto_close_tags": false,
-	"color_scheme": "Packages/User/SublimeLinter/Cobalt (SL).tmTheme",
 	"draw_minimap_border": true,
 	"expand_tabs_on_save": true,
 	"file_exclude_patterns":

@@ -5,7 +5,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 ## Some highlights
 
 * Sets up VVV with some custom sites for things like plugin development
-* Sets up Z shell with a modified version of Cobalt theme that supports both Git and SVN
+* Sets up Z shell that supports both Git and SVN
 * Sets up some commands for common functionality
 * Configures Mac OS defaults
 
@@ -99,5 +99,4 @@ A lot of them (especially the general infrastructure) were copied from [Jeremy F
 
 * [Helen Hou-Sandí](https://gist.github.com/helen/8493a6b4b57bfbf1ecaf)
 * [Pascal Birchler](https://github.com/swissspidy/dotfiles)
-* [Wes Bos](https://github.com/wesbos/Cobalt2-iterm)
 * [John Blackbourn](https://johnblackbourn.com/my-st3-packages)
