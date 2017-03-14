@@ -1,9 +1,6 @@
 #!/bin/sh
 
-apt_package_custom_list=(
-	redis-server
-	php7.0-redis
-)
+APT_PACKAGE_CUSTOM_LIST=( redis-server php7.0-redis )
 
 not_installed() {
   dpkg -s "$1" 2>&1 | grep -q 'Version:'
@@ -15,7 +12,7 @@ not_installed() {
   fi
 }
 
-for pkg in "${apt_package_custom_list[@]}"; do
+for pkg in "${APT_PACKAGE_CUSTOM_LIST[@]}"; do
 	if not_installed "${pkg}"; then
 		apt-get -y update
 		apt-get -y install ${pkg}
