@@ -1,6 +1,7 @@
 {
 	"auto_close_tags": false,
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
+	"theme": "Cobalt2.sublime-theme",
 	"draw_minimap_border": true,
 	"expand_tabs_on_save": true,
 	"file_exclude_patterns":
