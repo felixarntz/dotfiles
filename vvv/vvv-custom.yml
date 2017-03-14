@@ -19,6 +19,7 @@ sites:
     hosts:
       - plugins.dev
     custom:
+      db_name: 'plugins'
       site_title: 'Plugins Dev'
       wp_plugins:
         - contact-form-7
@@ -51,6 +52,7 @@ sites:
       - subsite1.plugins-ms.dev
       - subsite2.plugins-ms.dev
     custom:
+      db_name: 'plugins_ms'
       site_title: 'Plugins MS Dev'
       wp_type: 'subdomain'
       git_plugins:
@@ -68,6 +70,7 @@ sites:
       - subsite1.network-revolution2.dev
       - subsite2.network-revolution2.dev
     custom:
+      db_name: 'network_revolution'
       site_title: 'Network Revolution'
       wp_type: 'subdomain'
       git_plugins:
@@ -81,6 +84,7 @@ sites:
     hosts:
       - buddypress.dev
     custom:
+      db_name: 'buddypress'
       site_title: 'BuddyPress'
       wp_plugins:
         - buddypress
@@ -90,6 +94,7 @@ sites:
     hosts:
       - bedrock.dev
     custom:
+      db_name: 'bedrock'
       site_title: 'Bedrock Dev'
 
   leaves-and-love:
@@ -104,6 +109,7 @@ sites:
       - vielleichtinteressant.dev
       - wpzapp.dev
     custom:
+      db_name: 'leaves_and_love'
       site_title: 'leaves-and-love.dev'
       wp_type: 'subdomain'
 
@@ -134,6 +140,7 @@ sites:
     hosts:
       - bauing-immobilien.dev
     custom:
+      db_name: 'bauing_immobilien'
       site_title: 'BAUING Immobilien'
       wp_plugins:
         - easy-digital-downloads
@@ -147,6 +154,7 @@ sites:
     hosts:
       - energieausweis-online-erstellen.dev
     custom:
+      db_name: 'energieausweis_online_erstellen'
       site_title: 'Energieausweis online erstellen'
       wp_plugins:
         - easy-digital-downloads
@@ -167,6 +175,7 @@ sites:
     hosts:
       - immoticket24.dev
     custom:
+      db_name: 'immoticket24'
       site_title: 'Immoticket24.dev'
       wp_type: 'subdomain'
 
@@ -175,6 +184,7 @@ sites:
     hosts:
       - wuppertalbewegung.dev
     custom:
+      db_name: 'wuppertalbewegung'
       site_title: 'Wuppertalbewegung e.V.'
       git_themes:
         - wuppertalbewegung-theme
