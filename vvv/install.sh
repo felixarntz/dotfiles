@@ -19,10 +19,23 @@ if [ ! -d "vvv" ]; then
 	ln -s $VVV_ROOT/provision/provision-post.sh vvv/provision/provision-post.sh
 
 	if [ -f "$VVV_ROOT/provision/github.token" ]; then
-		cp "$VVV_ROOT/provision/github.token" vvv/provision
+		ln -s $VVV_ROOT/provision/github.token vvv/provision/github.token
 	fi
-	cp -R "$VVV_ROOT/www/api-api-develop" vvv/www
-	cp -R "$VVV_ROOT/www/playground" vvv/www
+
+	if [ ! -d "vvv/www/api-api-develop" ]; then
+		mkdir -p vvv/www/api-api-develop
+	fi
+
+	ln -s $VVV_ROOT/www/api-api-develop/vvv-hosts vvv/www/api-api-develop/vvv-hosts
+	ln -s $VVV_ROOT/www/api-api-develop/vvv-init.sh vvv/www/api-api-develop/vvv-init.sh
+	ln -s $VVV_ROOT/www/api-api-develop/vvv-nginx.conf vvv/www/api-api-develop/vvv-nginx.conf
+
+	if [ ! -d "vvv/www/playground" ]; then
+		mkdir -p vvv/www/playground
+	fi
+
+	ln -s $VVV_ROOT/www/playground/vvv-hosts vvv/www/playground/vvv-hosts
+	ln -s $VVV_ROOT/www/playground/vvv-nginx.conf vvv/www/playground/vvv-nginx.conf
 else
 	cd vvv
 	git pull
