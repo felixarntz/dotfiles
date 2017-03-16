@@ -20,6 +20,8 @@ if [ ! -d "vvv" ]; then
 	cp $VVV_ROOT/config/gitconfig vvv/config
 	#ln -s $VVV_ROOT/config/init/vvv-start-custom.conf vvv/config/init/vvv-start-custom.conf
 	cp $VVV_ROOT/config/init/vvv-start-custom.conf vvv/config/init
+	#ln -s $VVV_ROOT/provision/provision-pre.sh vvv/provision/provision-pre.sh
+	cp $VVV_ROOT/provision/provision-pre.sh vvv/provision
 	#ln -s $VVV_ROOT/provision/provision-post.sh vvv/provision/provision-post.sh
 	cp $VVV_ROOT/provision/provision-post.sh vvv/provision
 
