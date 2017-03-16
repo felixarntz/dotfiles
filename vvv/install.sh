@@ -12,32 +12,41 @@ cd ~/Development
 # Clone VVV
 if [ ! -d "vvv" ]; then
 	git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
-	# Symbolic linked vvv-custom.yml currently fails.
 	#ln -s $VVV_ROOT/vvv-custom.yml vvv/vvv-custom.yml
 	cp "$VVV_ROOT/vvv-custom.yml" vvv
-	ln -s $VVV_ROOT/Customfile vvv/Customfile
-	ln -s $VVV_ROOT/config/gitconfig vvv/config/gitconfig
-	ln -s $VVV_ROOT/config/init/vvv-start-custom.conf vvv/config/init/vvv-start-custom.conf
-	ln -s $VVV_ROOT/provision/provision-post.sh vvv/provision/provision-post.sh
+	#ln -s $VVV_ROOT/Customfile vvv/Customfile
+	cp $VVV_ROOT/Customfile vvv
+	#ln -s $VVV_ROOT/config/gitconfig vvv/config/gitconfig
+	cp $VVV_ROOT/config/gitconfig vvv/config
+	#ln -s $VVV_ROOT/config/init/vvv-start-custom.conf vvv/config/init/vvv-start-custom.conf
+	cp $VVV_ROOT/config/init/vvv-start-custom.conf vvv/config/init
+	#ln -s $VVV_ROOT/provision/provision-post.sh vvv/provision/provision-post.sh
+	cp $VVV_ROOT/provision/provision-post.sh vvv/provision
 
 	if [ -f "$VVV_ROOT/provision/github.token" ]; then
-		ln -s $VVV_ROOT/provision/github.token vvv/provision/github.token
+		#ln -s $VVV_ROOT/provision/github.token vvv/provision/github.token
+		cp $VVV_ROOT/provision/github.token vvv/provision
 	fi
 
 	if [ ! -d "vvv/www/api-api-develop" ]; then
 		mkdir -p vvv/www/api-api-develop
 	fi
 
-	ln -s $VVV_ROOT/www/api-api-develop/vvv-hosts vvv/www/api-api-develop/vvv-hosts
-	ln -s $VVV_ROOT/www/api-api-develop/vvv-init.sh vvv/www/api-api-develop/vvv-init.sh
-	ln -s $VVV_ROOT/www/api-api-develop/vvv-nginx.conf vvv/www/api-api-develop/vvv-nginx.conf
+	#ln -s $VVV_ROOT/www/api-api-develop/vvv-hosts vvv/www/api-api-develop/vvv-hosts
+	#ln -s $VVV_ROOT/www/api-api-develop/vvv-init.sh vvv/www/api-api-develop/vvv-init.sh
+	#ln -s $VVV_ROOT/www/api-api-develop/vvv-nginx.conf vvv/www/api-api-develop/vvv-nginx.conf
+	cp $VVV_ROOT/www/api-api-develop/vvv-hosts vvv/www/api-api-develop
+	cp $VVV_ROOT/www/api-api-develop/vvv-init.sh vvv/www/api-api-develop
+	cp $VVV_ROOT/www/api-api-develop/vvv-nginx.conf vvv/www/api-api-develop
 
 	if [ ! -d "vvv/www/playground" ]; then
 		mkdir -p vvv/www/playground
 	fi
 
-	ln -s $VVV_ROOT/www/playground/vvv-hosts vvv/www/playground/vvv-hosts
-	ln -s $VVV_ROOT/www/playground/vvv-nginx.conf vvv/www/playground/vvv-nginx.conf
+	#ln -s $VVV_ROOT/www/playground/vvv-hosts vvv/www/playground/vvv-hosts
+	#ln -s $VVV_ROOT/www/playground/vvv-nginx.conf vvv/www/playground/vvv-nginx.conf
+	cp $VVV_ROOT/www/playground/vvv-hosts vvv/www/playground
+	cp $VVV_ROOT/www/playground/vvv-nginx.conf vvv/www/playground
 else
 	cd vvv
 	git pull
