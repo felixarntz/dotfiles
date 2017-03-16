@@ -12,7 +12,9 @@ cd ~/Development
 # Clone VVV
 if [ ! -d "vvv" ]; then
 	git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
-	ln -s $VVV_ROOT/vvv-custom.yml vvv/vvv-custom.yml
+	# Symbolic linked vvv-custom.yml currently fails.
+	#ln -s $VVV_ROOT/vvv-custom.yml vvv/vvv-custom.yml
+	cp "$VVV_ROOT/vvv-custom.yml" vvv
 	ln -s $VVV_ROOT/Customfile vvv/Customfile
 	ln -s $VVV_ROOT/config/gitconfig vvv/config/gitconfig
 	ln -s $VVV_ROOT/config/init/vvv-start-custom.conf vvv/config/init/vvv-start-custom.conf
