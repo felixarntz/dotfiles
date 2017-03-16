@@ -2,24 +2,27 @@
 sites:
   wordpress-default:
     repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-default.git
+    skip_provisioning: true
     hosts:
       - local.wordpress.dev
 
   wordpress-develop:
     repo: https://github.com/Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
+    skip_provisioning: true
     hosts:
       - src.wordpress-develop.dev
       - build.wordpress-develop.dev
 
   wordpress-meta-environment:
     repo: https://github.com/WordPress/meta-environment.git
+    skip_provisioning: true
 
   plugins:
     repo: https://github.com/felixarntz/custom-site-template
     hosts:
       - plugins.dev
     custom:
-      db_name: 'plugins'
+      db_name: plugins
       site_title: 'Plugins Dev'
       wp_plugins:
         - contact-form-7
@@ -52,9 +55,9 @@ sites:
       - subsite1.plugins-ms.dev
       - subsite2.plugins-ms.dev
     custom:
-      db_name: 'plugins_ms'
+      db_name: plugins_ms
+      wp_type: subdomain
       site_title: 'Plugins MS Dev'
-      wp_type: 'subdomain'
       git_plugins:
         - wp-encrypt
         - wp-gcs-offload
@@ -70,9 +73,9 @@ sites:
       - subsite1.network-revolution2.dev
       - subsite2.network-revolution2.dev
     custom:
-      db_name: 'network_revolution'
+      db_name: network_revolution
+      wp_type: subdomain
       site_title: 'Network Revolution'
-      wp_type: 'subdomain'
       git_plugins:
         - global-admin
         - wp-multi-network
@@ -84,7 +87,7 @@ sites:
     hosts:
       - buddypress.dev
     custom:
-      db_name: 'buddypress'
+      db_name: buddypress
       site_title: 'BuddyPress'
       wp_plugins:
         - buddypress
@@ -94,7 +97,7 @@ sites:
     hosts:
       - bedrock.dev
     custom:
-      db_name: 'bedrock'
+      db_name: bedrock
       site_title: 'Bedrock Dev'
 
   leaves-and-love:
@@ -109,9 +112,9 @@ sites:
       - vielleichtinteressant.dev
       - wpzapp.dev
     custom:
-      db_name: 'leaves_and_love'
+      db_name: leaves_and_love
+      wp_type: subdomain
       site_title: 'leaves-and-love.dev'
-      wp_type: 'subdomain'
 
   playground:
     repo: false
@@ -140,7 +143,7 @@ sites:
     hosts:
       - bauing-immobilien.dev
     custom:
-      db_name: 'bauing_immobilien'
+      db_name: bauing_immobilien
       site_title: 'BAUING Immobilien'
       wp_plugins:
         - easy-digital-downloads
@@ -154,7 +157,7 @@ sites:
     hosts:
       - energieausweis-online-erstellen.dev
     custom:
-      db_name: 'energieausweis_online_erstellen'
+      db_name: energieausweis_online_erstellen
       site_title: 'Energieausweis online erstellen'
       wp_plugins:
         - easy-digital-downloads
@@ -175,16 +178,16 @@ sites:
     hosts:
       - immoticket24.dev
     custom:
-      db_name: 'immoticket24'
+      db_name: immoticket24
+      wp_type: subdomain
       site_title: 'Immoticket24.dev'
-      wp_type: 'subdomain'
 
   wuppertalbewegung:
     repo: https://github.com/felixarntz/custom-site-template
     hosts:
       - wuppertalbewegung.dev
     custom:
-      db_name: 'wuppertalbewegung'
+      db_name: wuppertalbewegung
       site_title: 'Wuppertalbewegung e.V.'
       git_themes:
         - wuppertalbewegung-theme
