@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 not_installed() {
   dpkg -s "$1" 2>&1 | grep -q 'Version:'
@@ -10,20 +10,22 @@ not_installed() {
   fi
 }
 
-if not_installed redis-server; then
-	apt-get -y update
-	apt-get -y install redis-server
-	echo " * Installed apt-get package redis-server"
+apt_package_custom_list=( redis-server php7.0-redis )
+
+for pkg in "${apt_package_check_list[@]}"; do
+	if not_installed "${pkg}"; then
+		apt-get -y update
+		apt-get -y install "${pkg}"
+		echo " * Installed apt-get package ${pkg}"
+	fi
+done
+
+if [ ! -f "/etc/init/vvv-start-custom.conf" ]; then
+	cp "/srv/config/init/vvv-start-custom.conf" "/etc/init/vvv-start-custom.conf"
+	echo " * Copied /srv/config/init/vvv-start-custom.conf to /etc/init/vvv-start-custom.conf"
 fi
 
-if not_installed php7.0-redis; then
-	apt-get -y update
-	apt-get -y install php7.0-redis
-	echo " * Installed apt-get package php7.0-redis"
+if [ ! -f "/home/vagrant/.gitconfig" ]; then
+	cp "/srv/config/gitconfig" "/home/vagrant/.gitconfig"
+	echo " * Copied /srv/config/gitconfig to /home/vagrant/.gitconfig"
 fi
-
-cp "/srv/config/init/vvv-start-custom.conf" "/etc/init/vvv-start-custom.conf"
-echo " * Copied /srv/config/init/vvv-start-custom.conf to /etc/init/vvv-start-custom.conf"
-
-cp "/srv/config/gitconfig" "/home/vagrant/.gitconfig"
-echo " * Copied /srv/config/gitconfig to /home/vagrant/.gitconfig"
