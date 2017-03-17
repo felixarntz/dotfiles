@@ -2,20 +2,17 @@
 sites:
   wordpress-default:
     repo: git@github.com:Varying-Vagrant-Vagrants/vvv-wordpress-default.git
-    skip_provisioning: true
     hosts:
       - local.wordpress.dev
 
   wordpress-develop:
     repo: git@github.com:Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
-    skip_provisioning: true
     hosts:
       - src.wordpress-develop.dev
       - build.wordpress-develop.dev
 
   wordpress-meta-environment:
     repo: git@github.com:WordPress/meta-environment.git
-    skip_provisioning: true
 
   plugins:
     repo: git@github.com:felixarntz/custom-site-template.git
@@ -65,7 +62,6 @@ sites:
 
   network-revolution:
     repo: git@github.com:felixarntz/custom-site-template.git
-    skip_provisioning: true
     hosts:
       - network-revolution.dev
       - subsite1.network-revolution.dev
@@ -85,7 +81,6 @@ sites:
 
   buddypress:
     repo: git@github.com:felixarntz/custom-site-template.git
-    skip_provisioning: true
     hosts:
       - buddypress.dev
     custom:
@@ -96,7 +91,6 @@ sites:
 
   bedrock:
     repo: git@github.com:felixarntz/bedrock.git
-    skip_provisioning: true
     hosts:
       - bedrock.dev
     custom:
@@ -122,11 +116,9 @@ sites:
 
   playground:
     repo: false
-    skip_provisioning: true
 
   api-api-develop:
     repo: false
-    skip_provisioning: true
     custom:
       repo_names:
         - boilerplate-for-authenticator
