@@ -11,6 +11,13 @@ sites:
       - src.wordpress-develop.dev
       - build.wordpress-develop.dev
 
+  wordpress-multisite-develop:
+    repo: git@github.com:felixarntz/vvv-wordpress-develop.git
+    branch: multisite-setup
+    hosts:
+      - src.wordpress-multisite-develop.dev
+      - build.wordpress-multisite-develop.dev
+
   wordpress-meta-environment:
     repo: git@github.com:WordPress/meta-environment.git
 
