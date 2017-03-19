@@ -99,7 +99,6 @@ sites:
 
   leaves-and-love:
     repo: git@github.com:felixarntz/leaves-and-love-network.git
-    skip_provisioning: true
     hosts:
       - leaves-and-love.dev
       - felix-arntz.dev
@@ -138,7 +137,6 @@ sites:
 
   bauing-immobilien:
     repo: git@github.com:felixarntz/custom-site-template.git
-    skip_provisioning: true
     hosts:
       - bauing-immobilien.dev
     custom:
@@ -153,7 +151,6 @@ sites:
 
   energieausweis-online-erstellen:
     repo: git@github.com:felixarntz/custom-site-template.git
-    skip_provisioning: true
     hosts:
       - energieausweis-online-erstellen.dev
     custom:
@@ -175,7 +172,6 @@ sites:
 
   immoticket24:
     repo: git@github.com:felixarntz/immoticket24-network.git
-    skip_provisioning: true
     hosts:
       - immoticket24.dev
     custom:
@@ -185,7 +181,6 @@ sites:
 
   wuppertalbewegung:
     repo: git@github.com:felixarntz/custom-site-template.git
-    skip_provisioning: true
     hosts:
       - wuppertalbewegung.dev
     custom:
