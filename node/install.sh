@@ -2,7 +2,7 @@ NODE_MODULES_DIR="$(npm root -g)"
 readonly NODE_MODULES_DIR
 cd $NODE_MODULES_DIR
 
-NODE_MODULES=( "grunt-cli" "gulp-cli" "bower" "cordova" "ionic" "jshint" )
+NODE_MODULES=( "grunt-cli" "gulp-cli" "bower" "cordova" "ionic" "jshint" "jslint" )
 for i in "${NODE_MODULES[@]}"; do
 	if [ ! -d "$i" ]; then
 		echo "Installing $i..."
