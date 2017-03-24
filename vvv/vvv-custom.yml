@@ -43,6 +43,7 @@ sites:
         - pet-store
         - post-types-definitely
         - responsive-video-shortcodes
+        - sg-cachepress
         - site-icon-extended
         - torro-forms-bootstrap-markup
         - widgets-definitely
