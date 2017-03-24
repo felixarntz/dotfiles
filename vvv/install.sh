@@ -56,7 +56,7 @@ else
 fi
 
 # Clone misc repositories into misc directory (not VVV-related)
-MISC_REPOSITORIES=( custom-site-template leavesandlove-wp-plugin-util plugin-lib slides vvv-custom-utilities wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-starter-theme wpdlib )
+MISC_REPOSITORIES=( custom-site-template leavesandlove-wp-plugin-util plugin-lib slides vvv-custom-utilities vvv-wordpress-develop wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-starter-theme wpdlib )
 for i in "${MISC_REPOSITORIES[@]}"
 do :
 	if [[ ! -d "misc/$i" ]]; then
