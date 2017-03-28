@@ -11,3 +11,12 @@ do :
     noroot git pull
   fi
 done
+
+if [[ -d "${VVV_PATH_TO_SITE}/console" ]]; then
+	cd ${VVV_PATH_TO_SITE}/console
+	if [[ ! -d "${VVV_PATH_TO_SITE}/console/vendor" ]]; then
+		noroot composer install
+	else
+		noroot composer update
+	fi
+fi
