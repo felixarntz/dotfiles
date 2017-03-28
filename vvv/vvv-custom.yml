@@ -125,23 +125,9 @@ sites:
     repo: false
 
   api-api-develop:
-    repo: false
-    custom:
-      repo_names:
-        - boilerplate-for-authenticator
-        - boilerplate-for-storage
-        - boilerplate-for-structure
-        - boilerplate-for-transporter
-        - core
-        - console
-        - storage-cookie
-        - storage-session
-        - storage-wordpress-option
-        - storage-wordpress-usermeta
-        - structure-billomat
-        - structure-google
-        - structure-twitter
-        - structure-wordpress
+    repo: git@github.com:api-api/vvv-api-api-setup.git
+    hosts:
+      - api-api.dev
 
   bauing-immobilien:
     repo: git@github.com:felixarntz/custom-site-template.git
