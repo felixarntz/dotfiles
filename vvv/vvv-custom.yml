@@ -121,6 +121,14 @@ sites:
       wp_type: subdomain
       site_title: 'leaves-and-love.dev'
 
+  tierheim:
+    repo: git@github.com:felixarntz/tierheim.git
+    hosts:
+      - tierschutzverein-wuppertal.dev
+    custom:
+      db_name: tierheim
+      site_title: 'Tierschutzverein Wuppertal e.V.'
+
   playground:
     repo: false
 
