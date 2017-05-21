@@ -97,6 +97,14 @@ sites:
       wp_plugins:
         - buddypress
 
+  example:
+    repo: git@github.com:felixarntz/custom-site-template.git
+    hosts:
+      - example.com
+    custom:
+      db_name: example
+      site_title: Example.com
+
   bedrock:
     repo: git@github.com:felixarntz/bedrock.git
     hosts:
