@@ -1,0 +1,6 @@
+{
+	"phpcs_sniffer_run": true,
+	"phpcs_command_on_save": true,
+	"phpcs_executable_path": "",
+	"phpcs_additional_args": {}
+}
