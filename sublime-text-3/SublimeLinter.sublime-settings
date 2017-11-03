@@ -41,6 +41,11 @@
                 "args": [],
                 "excludes": [],
                 "rulesets": "${project}/phpmd.xml"
+            },
+            "stylelint": {
+                "@disable": false,
+                "args": [],
+                "excludes": []
             }
         },
         "mark_style": "outline",

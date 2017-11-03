@@ -18,6 +18,7 @@
 		"SFTP",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-contrib-stylelint",
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-php",
