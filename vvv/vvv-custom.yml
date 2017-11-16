@@ -189,6 +189,20 @@ sites:
       wp_type: subdomain
       site_title: 'Immoticket24.dev'
 
+  phpcompat:
+    repo: git@github.com:felixarntz/custom-site-template.git
+    hosts:
+      - phpcompat.dev
+    custom:
+      db_name: phpcompat
+      site_title: 'PHP Compatibility Checker Dev'
+      wp_plugins:
+        - attachment-taxonomies
+        - contact-form-7
+        - easy-digital-downloads
+        - sg-cachepress
+        - wordpress-seo
+
   wuppertalbewegung:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
