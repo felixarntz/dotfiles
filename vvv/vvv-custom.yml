@@ -3,20 +3,20 @@ sites:
   wordpress-default:
     repo: git@github.com:Varying-Vagrant-Vagrants/vvv-wordpress-default.git
     hosts:
-      - local.wordpress.dev
+      - local.wordpress.test
 
   wordpress-develop:
     repo: git@github.com:Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
     hosts:
-      - src.wordpress-develop.dev
-      - build.wordpress-develop.dev
+      - src.wordpress-develop.test
+      - build.wordpress-develop.test
 
   wordpress-multisite-develop:
     repo: git@github.com:felixarntz/vvv-wordpress-develop.git
     branch: multisite-setup
     hosts:
-      - src.wordpress-multisite-develop.dev
-      - build.wordpress-multisite-develop.dev
+      - src.wordpress-multisite-develop.test
+      - build.wordpress-multisite-develop.test
 
   wordpress-meta-environment:
     repo: git@github.com:WordPress/meta-environment.git
@@ -24,7 +24,7 @@ sites:
   plugins:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
-      - plugins.dev
+      - plugins.test
     custom:
       db_name: plugins
       site_title: 'Plugins Dev'
@@ -56,9 +56,9 @@ sites:
   plugins-ms:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
-      - plugins-ms.dev
-      - subsite1.plugins-ms.dev
-      - subsite2.plugins-ms.dev
+      - plugins-ms.test
+      - subsite1.plugins-ms.test
+      - subsite2.plugins-ms.test
     custom:
       db_name: plugins_ms
       wp_type: subdomain
@@ -71,12 +71,12 @@ sites:
   network-revolution:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
-      - network-revolution.dev
-      - subsite1.network-revolution.dev
-      - subsite2.network-revolution.dev
-      - network-revolution2.dev
-      - subsite1.network-revolution2.dev
-      - subsite2.network-revolution2.dev
+      - network-revolution.test
+      - subsite1.network-revolution.test
+      - subsite2.network-revolution.test
+      - network-revolution2.test
+      - subsite1.network-revolution2.test
+      - subsite2.network-revolution2.test
     custom:
       db_name: network_revolution
       wp_type: subdomain
@@ -90,7 +90,7 @@ sites:
   buddypress:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
-      - buddypress.dev
+      - buddypress.test
     custom:
       db_name: buddypress
       site_title: 'BuddyPress'
@@ -108,7 +108,7 @@ sites:
   bedrock:
     repo: git@github.com:felixarntz/bedrock.git
     hosts:
-      - bedrock.dev
+      - bedrock.test
     custom:
       db_name: bedrock
       site_title: 'Bedrock Dev'
@@ -116,23 +116,23 @@ sites:
   leaves-and-love:
     repo: git@github.com:felixarntz/leaves-and-love-network.git
     hosts:
-      - leaves-and-love.dev
-      - felix-arntz.dev
-      - alexa.felix-arntz.dev
-      - cocktails.felix-arntz.dev
-      - screen-reader-check.felix-arntz.dev
-      - scheisse.felix-arntz.dev
-      - vielleichtinteressant.dev
-      - wpzapp.dev
+      - leaves-and-love.test
+      - felix-arntz.test
+      - alexa.felix-arntz.test
+      - cocktails.felix-arntz.test
+      - screen-reader-check.felix-arntz.test
+      - scheisse.felix-arntz.test
+      - vielleichtinteressant.test
+      - wpzapp.test
     custom:
       db_name: leaves_and_love
       wp_type: subdomain
-      site_title: 'leaves-and-love.dev'
+      site_title: 'leaves-and-love.test'
 
   tierheim:
     repo: git@github.com:felixarntz/tierheim.git
     hosts:
-      - tierschutzverein-wuppertal.dev
+      - tierschutzverein-wuppertal.test
     custom:
       db_name: tierheim
       site_title: 'Tierschutzverein Wuppertal e.V.'
@@ -143,12 +143,12 @@ sites:
   api-api-develop:
     repo: git@github.com:api-api/vvv-api-api-setup.git
     hosts:
-      - api-api.dev
+      - api-api.test
 
   bauing-immobilien:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
-      - bauing-immobilien.dev
+      - bauing-immobilien.test
     custom:
       db_name: bauing_immobilien
       site_title: 'BAUING Immobilien'
@@ -162,7 +162,7 @@ sites:
   energieausweis-online-erstellen:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
-      - energieausweis-online-erstellen.dev
+      - energieausweis-online-erstellen.test
     custom:
       db_name: energieausweis_online_erstellen
       site_title: 'Energieausweis online erstellen'
@@ -183,16 +183,16 @@ sites:
   immoticket24:
     repo: git@github.com:felixarntz/immoticket24-network.git
     hosts:
-      - immoticket24.dev
+      - immoticket24.test
     custom:
       db_name: immoticket24
       wp_type: subdomain
-      site_title: 'Immoticket24.dev'
+      site_title: 'Immoticket24.test'
 
   phpcompat:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
-      - phpcompat.dev
+      - phpcompat.test
     custom:
       db_name: phpcompat
       site_title: 'PHP Compatibility Checker Dev'
@@ -206,7 +206,7 @@ sites:
   wuppertalbewegung:
     repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
-      - wuppertalbewegung.dev
+      - wuppertalbewegung.test
     custom:
       db_name: wuppertalbewegung
       site_title: 'Wuppertalbewegung e.V.'
