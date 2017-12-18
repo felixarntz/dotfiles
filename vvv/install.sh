@@ -11,7 +11,12 @@ cd ~/Development
 
 # Clone VVV
 if [ ! -d "vvv" ]; then
-	git clone git@github.com:Varying-Vagrant-Vagrants/VVV.git vvv
+	git clone git@github.com:felixarntz/VVV.git vvv
+
+	cd vvv
+	git remote add upstream git@github.com:Varying-Vagrant-Vagrants/VVV.git
+	cd ..
+
 	#ln -s $VVV_ROOT/vvv-custom.yml vvv/vvv-custom.yml
 	cp "$VVV_ROOT/vvv-custom.yml" vvv
 	#ln -s $VVV_ROOT/Customfile vvv/Customfile
@@ -30,17 +35,6 @@ if [ ! -d "vvv" ]; then
 		cp $VVV_ROOT/provision/github.token vvv/provision
 	fi
 
-	if [ ! -d "vvv/www/api-api-develop" ]; then
-		mkdir -p vvv/www/api-api-develop
-	fi
-
-	#ln -s $VVV_ROOT/www/api-api-develop/vvv-hosts vvv/www/api-api-develop/vvv-hosts
-	#ln -s $VVV_ROOT/www/api-api-develop/vvv-init.sh vvv/www/api-api-develop/vvv-init.sh
-	#ln -s $VVV_ROOT/www/api-api-develop/vvv-nginx.conf vvv/www/api-api-develop/vvv-nginx.conf
-	cp $VVV_ROOT/www/api-api-develop/vvv-hosts vvv/www/api-api-develop
-	cp $VVV_ROOT/www/api-api-develop/vvv-init.sh vvv/www/api-api-develop
-	cp $VVV_ROOT/www/api-api-develop/vvv-nginx.conf vvv/www/api-api-develop
-
 	if [ ! -d "vvv/www/playground" ]; then
 		mkdir -p vvv/www/playground
 	fi
@@ -56,7 +50,7 @@ else
 fi
 
 # Clone misc repositories into misc directory (not VVV-related)
-MISC_REPOSITORIES=( custom-site-template leavesandlove-wp-plugin-util plugin-lib slides vvv-custom-utilities vvv-wordpress-develop wp-background-processing-ui wp-js wp-map-picker wp-media-picker wp-starter-theme wpdlib )
+MISC_REPOSITORIES=( custom-site-template plugin-lib slides vvv vvv-custom-utilities vvv-wordpress-develop wp-background-processing-ui wp-map-picker wp-media-picker )
 for i in "${MISC_REPOSITORIES[@]}"
 do :
 	if [[ ! -d "misc/$i" ]]; then
