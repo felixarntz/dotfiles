@@ -1,13 +1,13 @@
 #!/bin/bash
 
 not_installed() {
-  dpkg -s "$1" 2>&1 | grep -q 'Version:'
-  if [[ "$?" -eq 0 ]]; then
-    apt-cache policy "$1" | grep 'Installed: (none)'
-    return "$?"
-  else
-    return 0
-  fi
+	dpkg -s "$1" 2>&1 | grep -q 'Version:'
+	if [[ "$?" -eq 0 ]]; then
+		apt-cache policy "$1" | grep 'Installed: (none)'
+		return "$?"
+	else
+		return 0
+	fi
 }
 
 apt_package_custom_list=( redis-server php7.0-redis )
