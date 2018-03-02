@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
 		"Behat",
 		"DocBlockr",
 		"EditorConfig",
@@ -17,9 +18,9 @@
 		"Sass",
 		"SFTP",
 		"SublimeLinter",
-		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-contrib-stylelint",
 		"SublimeLinter-csslint",
+		"SublimeLinter-eslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-php",
 		"SublimeLinter-phpcs",
