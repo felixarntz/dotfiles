@@ -1,85 +1,66 @@
 {
-    "user": {
-        "debug": false,
-        "delay": 0.25,
-        "error_color": "D02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "background",
-        "linters": {
-            "csslint": {
-                "@disable": false,
-                "args": [],
-                "errors": "",
-                "excludes": [],
-                "ignore": "",
-                "warnings": ""
-            },
-            "eslint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "jshint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "php": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "phpcs": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "standard": "${project}/phpcs.xml"
-            },
-            "phpmd": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "rulesets": "${project}/phpmd.xml"
-            },
-            "stylelint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            }
+    "debug": false,
+    "delay": 0.25,
+    "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
+    "lint_mode": "background",
+    "linters": {
+        "csslint": {
+            "@disable": false,
+            "args": [],
+            "errors": "",
+            "excludes": [],
+            "ignore": "",
+            "warnings": ""
         },
-        "mark_style": "outline",
-        "no_column_highlights_line": false,
-        "passive_warnings": false,
-        "paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
+        "eslint": {
+            "@disable": false,
+            "args": [],
+            "excludes": []
         },
-        "python_paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
+        "jshint": {
+            "@disable": false,
+            "args": [],
+            "excludes": []
         },
-        "rc_search_limit": 3,
-        "shell_timeout": 10,
-        "show_errors_on_save": false,
-        "show_marks_in_minimap": true,
-        "syntax_map": {
-            "html (django)": "html",
-            "html (rails)": "html",
-            "html 5": "html",
-            "javascript (babel)": "javascript",
-            "magicpython": "python",
-            "php": "html",
-            "python django": "python",
-            "pythonimproved": "python"
+        "php": {
+            "@disable": false,
+            "args": [],
+            "excludes": []
         },
-        "tooltip_fontsize": "1rem",
-        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
-        "tooltip_theme_excludes": [],
-        "tooltips": false,
-        "warning_color": "DDB700",
-        "wrap_find": true
+        "phpcs": {
+            "@disable": false,
+            "args": [],
+            "excludes": [],
+            "standard": "${project}/phpcs.xml"
+        },
+        "phpmd": {
+            "@disable": false,
+            "args": [],
+            "excludes": [],
+            "rulesets": "${project}/phpmd.xml"
+        },
+        "stylelint": {
+            "@disable": false,
+            "args": [],
+            "excludes": []
+        }
+    },
+    "no_column_highlights_line": false,
+    "paths": {
+        "linux": [],
+        "osx": [],
+        "windows": []
+    },
+    "shell_timeout": 10,
+    "show_marks_in_minimap": true,
+    "syntax_map": {
+        "html (django)": "html",
+        "html (rails)": "html",
+        "html 5": "html",
+        "javascript (babel)": "javascript",
+        "magicpython": "python",
+        "php": "html",
+        "python django": "python",
+        "pythonimproved": "python"
     }
 }
