@@ -44,6 +44,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 * Node
 * OpenSSL
 * Paw
+* PHP
 * PHPCodeSniffer (including WordPress Coding Standards and PHPCompatibility sniffs)
 * PHPMD
 * PHPUnit
