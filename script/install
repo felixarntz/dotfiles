@@ -13,6 +13,7 @@ else
 fi
 
 brew bundle
+brew link gettext --force
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
