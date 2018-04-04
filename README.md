@@ -25,6 +25,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 * fabric
 * Filezilla
 * Genymotion
+* gettext
 * git (with configuration)
 * gnupg
 * go
@@ -43,6 +44,8 @@ These dotfiles will install common software and setup preferences on a new Mac O
 * Node
 * OpenSSL
 * Paw
+* PHPCodeSniffer (including WordPress Coding Standards and PHPCompatibility sniffs)
+* PHPMD
 * PHPUnit
 * Sequel Pro
 * Silverlight
@@ -60,6 +63,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 * VLC Player
 * wget
 * WP-CLI
+* yarn
 * zsh (with configuration)
 
 ## Usage
