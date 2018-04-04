@@ -5,6 +5,7 @@ tap 'homebrew/php'
 tap 'caskroom/cask'
 
 brew 'ack'
+brew 'autoconf'
 brew 'bash-completion'
 brew 'coreutils'
 brew 'direnv'
