@@ -1,22 +1,23 @@
 ---
 sites:
   wordpress-default:
-    repo: git@github.com:Varying-Vagrant-Vagrants/vvv-wordpress-default.git
+    repo: git@github.com:felixarntz/custom-site-template.git
     hosts:
       - local.wordpress.test
 
   wordpress-develop:
-    repo: git@github.com:Varying-Vagrant-Vagrants/vvv-wordpress-develop.git
+    repo: git@github.com:felixarntz/custom-site-template-develop.git
     hosts:
       - src.wordpress-develop.test
       - build.wordpress-develop.test
 
   wordpress-multisite-develop:
-    repo: git@github.com:felixarntz/vvv-wordpress-develop.git
-    branch: multisite-setup
+    repo: git@github.com:felixarntz/custom-site-template-develop.git
     hosts:
       - src.wordpress-multisite-develop.test
       - build.wordpress-multisite-develop.test
+    custom:
+      wp_type: subdirectory
 
   plugins:
     repo: git@github.com:felixarntz/custom-site-template.git
@@ -31,10 +32,14 @@ sites:
       git_plugins:
         - attachment-taxonomies
         - bootstrap-for-contact-form-7
+        - bulk-emails
+        - capability-tutorials
         - custom-css-outsourcer
+        - easy-customer-invoices
         - site-icon-extended
         - wp-api-json-feed
         - wp-encrypt
+        - wp-gdpr-cookie-notice
         - wp-plugin-control
         - wp-shortcode-cache
         - wp-site-identity
@@ -53,6 +58,7 @@ sites:
       wp_type: subdomain
       site_title: 'Network Revolution'
       git_plugins:
+        - wp-global-options
         - wp-global-admin
         - wp-multi-network
         - wp-network-roles
@@ -143,6 +149,15 @@ sites:
       db_name: immoticket24
       wp_type: subdomain
       site_title: 'Immoticket24.test'
+
+  wp-composer-stack:
+    repo: git@github.com:felixarntz/wp-composer-stack.git
+    hosts:
+      - wp-composer-stack.test
+    custom:
+      db_name: wp_composer_stack
+      wp_type: subdomain
+      site_title: 'WP Composer Stack'
 
   wuppertalbewegung:
     repo: git@github.com:felixarntz/custom-site-template.git
