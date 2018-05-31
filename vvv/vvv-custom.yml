@@ -10,16 +10,16 @@ sites:
   wordpress-develop:
     repo: git@github.com:felixarntz/custom-site-template-develop.git
     hosts:
-      - src.wordpress-develop.test
       - build.wordpress-develop.test
+      - src.wordpress-develop.test
     custom:
       db_name: wordpress_develop
 
   wordpress-multisite-develop:
     repo: git@github.com:felixarntz/custom-site-template-develop.git
     hosts:
-      - src.wordpress-multisite-develop.test
       - build.wordpress-multisite-develop.test
+      - src.wordpress-multisite-develop.test
     custom:
       db_name: wordpress_multisite_develop
       wp_type: subdirectory
