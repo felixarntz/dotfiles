@@ -1,4 +1,6 @@
-// These settings override both User and Default settings for the JavaScript syntax
 {
+	"extensions":
+	[
+	],
 	"word_wrap": false
 }
