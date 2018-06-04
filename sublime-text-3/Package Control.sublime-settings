@@ -20,7 +20,6 @@
 		"SublimeLinter",
 		"SublimeLinter-csslint",
 		"SublimeLinter-eslint",
-		"SublimeLinter-jshint",
 		"SublimeLinter-php",
 		"SublimeLinter-phpcs",
 		"SublimeLinter-phpmd",

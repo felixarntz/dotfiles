@@ -17,11 +17,6 @@
             "args": [],
             "excludes": []
         },
-        "jshint": {
-            "@disable": false,
-            "args": [],
-            "excludes": []
-        },
         "php": {
             "@disable": false,
             "args": [],
