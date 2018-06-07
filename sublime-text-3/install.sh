@@ -17,6 +17,7 @@ ln -s ~/dotfiles/sublime-text-3/phpcs.sublime-settings ~/Library/Application\ Su
 
 ln -s ~/dotfiles/sublime-text-3/CSS.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/CSS.sublime-settings
 ln -s ~/dotfiles/sublime-text-3/HTML.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/HTML.sublime-settings
+ln -s ~/dotfiles/sublime-text-3/JavaScript\ \(Babel\).sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/JavaScript\ \(Babel\).sublime-settings
 ln -s ~/dotfiles/sublime-text-3/JavaScript.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/JavaScript.sublime-settings
 ln -s ~/dotfiles/sublime-text-3/JSON.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/JSON.sublime-settings
 ln -s ~/dotfiles/sublime-text-3/LESS.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/LESS.sublime-settings
