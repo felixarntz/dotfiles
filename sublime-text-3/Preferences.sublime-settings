@@ -31,7 +31,9 @@
 		".svn",
 		".git",
 		".hg",
-		"CVS"
+		"CVS",
+		"node_modules",
+		"vendor"
 	],
 	"font_size": 15.0,
 	"ignored_packages":
