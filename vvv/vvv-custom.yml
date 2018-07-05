@@ -175,7 +175,12 @@ sites:
         - wuppertalbewegung-theme
 
 utility-sources:
-  custom: git@github.com:felixarntz/vvv-custom-utilities.git
+  core:
+    repo: git@github.com:Varying-Vagrant-Vagrants/vvv-utilities.git
+    branch: master
+  custom:
+    repo: git@github.com:felixarntz/vvv-custom-utilities.git
+    branch: master
 
 utilities:
   core:
@@ -183,6 +188,8 @@ utilities:
     - opcache-status
     - phpmyadmin
     - webgrind
+    - trusted-hosts
+    - tls-ca
   custom:
     - bower
     - gulp
