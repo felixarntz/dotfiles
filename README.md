@@ -71,7 +71,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 
 ### Prerequisites
 
-* Create an SSH key for GitHub: `ssh-keygen -t rsa -b 4096 -C "felix-arntz@leaves-and-love.net"`
+* Create an SSH key for GitHub: `ssh-keygen -t rsa -b 4096 -C "hello@felix-arntz.me"`
 * Store it as `~/.ssh/id_rsa`
 * Run `eval "$(ssh-agent -s)"` and then `ssh-add ~/.ssh/id_rsa`
 * Run `pbcopy < ~/.ssh/id_rsa`
