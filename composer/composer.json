@@ -4,11 +4,8 @@
         "sebastian/phpcpd": "*",
         "phpunit/phpunit": "*",
         "squizlabs/php_codesniffer": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "~0.4.4",
         "wimg/php-compatibility": "*",
         "wp-coding-standards/wpcs": "^1"
-    },
-    "scripts": {
-        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../wp-coding-standards/wpcs,../../wimg/php-compatibility",
-        "post-update-cmd":  "\"vendor/bin/phpcs\" --config-set installed_paths ../../wp-coding-standards/wpcs,../../wimg/php-compatibility"
     }
 }
