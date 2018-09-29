@@ -1,5 +1,0 @@
-[user]
-	name = Felix Arntz
-	email = hello@felix-arntz.me
-[credential]
-	helper = osxkeychain

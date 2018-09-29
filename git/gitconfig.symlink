@@ -29,7 +29,3 @@
 	autocorrect = 1
 [push]
 	default = simple
-[user]
-	signingkey = FADA379BC776A6FC
-[commit]
-	gpgsign = true
