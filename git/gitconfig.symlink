@@ -30,6 +30,6 @@
 [push]
 	default = simple
 [user]
-	signingkey = 4B604201CA43F4B8
+	signingkey = FADA379BC776A6FC
 [commit]
 	gpgsign = true
