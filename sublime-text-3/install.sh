@@ -2,6 +2,10 @@ if [ ! -f ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Pa
 	curl "https://packagecontrol.io/Package Control.sublime-package" > ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
 fi
 
+if [ ! -f ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Theme\ -\ Cobalt2.sublime-package ]; then
+	cp ~/dotfiles/sublime-text-3/Theme\ -\ Cobalt2.sublime-package ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
+fi
+
 if [ ! -f /usr/local/bin/subl ]; then
 	ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 fi
