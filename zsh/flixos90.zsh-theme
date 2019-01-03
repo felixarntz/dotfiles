@@ -78,8 +78,8 @@ prompt_context() {
 # Git: branch/detached head, dirty status
 prompt_git() {
 	local ref commit dirty svn=$(svn info 2>/dev/null)
-	if [ ! "$svn" ]; then
-		if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+	if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
+		if [[ ! "$svn" || $(git rev-parse --show-toplevel) == $(svn info --show-item 'wc-root') ]]; then
 			ZSH_THEME_GIT_PROMPT_DIRTY='±'
 			dirty=$(parse_git_dirty)
 			ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
