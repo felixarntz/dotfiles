@@ -30,7 +30,7 @@ These dotfiles will install common software and setup preferences on a new Mac O
 * gnupg
 * go
 * Google Chrome
-* Google Cloud SDK (with configuration)
+* Google Cloud SDK
 * Google Drive
 * GPG Tools
 * grc
