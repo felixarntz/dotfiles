@@ -71,10 +71,20 @@ These dotfiles will install common software and setup preferences on a new Mac O
 
 ### Prerequisites
 
-* Create an SSH key for GitHub: `ssh-keygen -t rsa -b 4096 -C "hello@felix-arntz.me"`
+#### SSH Key
+
+* Create an SSH key for GitHub: `ssh-keygen -t rsa -b 4096 -C "flixos90@gmail.com"`
 * Store it as `~/.ssh/id_rsa`
 * Run `eval "$(ssh-agent -s)"` and then `ssh-add ~/.ssh/id_rsa`
 * Run `pbcopy < ~/.ssh/id_rsa`
+* [Add the new key to your GitHub account](https://github.com/settings/keys) by pasting it
+
+#### GPG Key
+
+* Create a GPG key: `gpg --full-generate-key` (RSA and RSA, key length 4096)
+* Run `gpg --list-secret-keys --keyid-format LONG` and copy the value behind the slash under `sec`
+* Run `gpg --armor --export $KEY` where you paste the value instead of $KEY
+* Copy the printed key to the clipboard
 * [Add the new key to your GitHub account](https://github.com/settings/keys) by pasting it
 
 ### Setting up dotfiles
