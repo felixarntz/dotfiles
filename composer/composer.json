@@ -1,5 +1,6 @@
 {
     "require": {
+    	"pantheon-systems/terminus": "*",
         "phpmd/phpmd": "*",
         "sebastian/phpcpd": "*",
         "phpunit/phpunit": "*",
