@@ -1,12 +1,12 @@
 {
-    "require": {
-    	"pantheon-systems/terminus": "*",
-        "phpmd/phpmd": "*",
-        "sebastian/phpcpd": "*",
-        "phpunit/phpunit": "*",
-        "squizlabs/php_codesniffer": "*",
-        "dealerdirect/phpcodesniffer-composer-installer": "~0.4.4",
-        "wimg/php-compatibility": "*",
-        "wp-coding-standards/wpcs": "^1"
-    }
+  "require": {
+    "pantheon-systems/terminus": "*",
+    "phpmd/phpmd": "*",
+    "sebastian/phpcpd": "*",
+    "phpunit/phpunit": "*",
+    "squizlabs/php_codesniffer": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "~0.4.4",
+    "wimg/php-compatibility": "*",
+    "wp-coding-standards/wpcs": "^1"
+  }
 }
